@@ -41,4 +41,8 @@ public class Article {
             this.buyers = new ArrayList<Person>();
         this.buyers.add(pers);
     }
+    
+    public List<Person> getBuyers(){
+        return buyers;
+    }
 }
