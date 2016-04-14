@@ -1,14 +1,20 @@
 
 package fr.istic.tpnosql.entity;
 
+import com.google.code.morphia.annotations.Entity;
+import com.google.code.morphia.annotations.Id;
+import com.google.code.morphia.annotations.Reference;
 import java.util.ArrayList;
 import java.util.List;
 import org.bson.types.ObjectId;
 
+@Entity
 public class Article {
+  @Id
   private ObjectId id;
   private String name;
   private int stars;
+  @Reference
   private List<Person> buyers;
   
   public Article(){

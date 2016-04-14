@@ -1,6 +1,9 @@
 
 package fr.istic.tpnosql.entity;
 
+import com.google.code.morphia.annotations.Embedded;
+
+@Embedded
 public class Address {
    private String street;
    private String city;
