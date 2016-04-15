@@ -50,4 +50,8 @@ public class Address {
        this.postCode = postCode;
        this.country = country;
    }
+   
+   public String toString(){
+       return "address : {country: "+this.country+", city: "+this.city+", street: "+this.street+", postCode: "+this.postCode+"}";
+   }
 }

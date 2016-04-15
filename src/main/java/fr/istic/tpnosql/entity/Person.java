@@ -14,7 +14,7 @@ public class Person {
    private String name;
    @Embedded
    private List<Address> addresses;
-   
+
    public Person(){
        this.addresses = new ArrayList<Address>(); 
    }
@@ -38,5 +38,16 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+   }
+    
+   public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
+   }
+   
+   public String toString(){
+       StringBuilder str = new StringBuilder();
+       for(Address ad : addresses)
+           str.append(ad.toString()+" ");
+       return "person: {name: "+this.name+" ,"+str+"}";
    }
 }

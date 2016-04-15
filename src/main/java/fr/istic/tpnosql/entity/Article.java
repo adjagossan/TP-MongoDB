@@ -51,4 +51,11 @@ public class Article {
     public List<Person> getBuyers(){
         return buyers;
     }
+    
+    public String toString(){
+       StringBuilder str = new StringBuilder();
+       for(Person pers : buyers)
+           str.append(pers.toString()+" ");
+       return "article: {name: "+this.name+" ,stars: "+this.stars+" ,"+str+"}";
+    } 
 }
